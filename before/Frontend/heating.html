@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge Systems - Smart Automation</title>
+    <link rel="stylesheet" href="heating.css">
+
+</head>
+<body>
+
+    <div class="room-control">
+        <p class="room-label">Master Bedroom</p>
+        <div class="wrapper" id="control-1">
+            <span class="minus">-</span>
+            <span class="num">15°C</span>
+            <span class="plus">+</span>
+        </div>
+    </div>
+        
+    <div class="room-control">
+        <p class="room-label">Hallway</p>
+        <div class="wrapper" id="control-2">
+            <span class="minus">-</span>
+            <span class="num">15°C</span>
+            <span class="plus">+</span>
+        </div>
+    </div>
+    
+
+    <div class="room-control">
+        <p class="room-label">Living Room</p>
+        <div class="wrapper" id="control-3">
+            <span class="minus">-</span>
+            <span class="num">15°C</span>
+            <span class="plus">+</span>
+        </div>
+    </div>
+    
+
+    <div class="room-control">
+        <p class="room-label">Kitchen</p>
+        <div class="wrapper" id="control-4">
+            <span class="minus">-</span>
+            <span class="num">15°C</span>
+            <span class="plus">+</span>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll(".wrapper").forEach(wrapper => {
+            const plus = wrapper.querySelector(".plus"),
+            minus = wrapper.querySelector(".minus"),
+            num = wrapper.querySelector(".num");
+
+            let temperature = 15; 
+
+            plus.addEventListener("click", ()=>{
+                temperature++;
+                if (temperature>25) {
+                    temperature=25;
+                }
+                num.innerText = `${temperature}°C`;
+                console.log(`${temperature}°C`);
+            });
+
+            minus.addEventListener("click", ()=>{
+                temperature--;
+                if (temperature<15) {
+                    temperature=15;
+                }
+                num.innerText = `${temperature}°C`;
+                console.log(`${temperature}°C`);
+            });
+        });
+    </script>
+    
+   <!-- <header>
+        <h1>Heating</h1>
+    </header>
+
+
+    <section class="features">
+
+        <div class="feature">
+            <h2>Master</h2>
+            <button class="toggle-btn">Heating</button>
+        </div>
+
+
+        <div class="feature">
+            <h2>Living</h2>
+            <button class="toggle-btn">Alarms</button>
+        </div>
+
+
+        <div class="feature">
+            <h2>Entrance</h2>
+            <button class="toggle-btn">Lights</button>
+        </div>
+
+
+        <div class="feature">
+            <h2>Guest Bedroom</h2>
+            <button class="toggle-btn">Water Heating</button>
+        </div>
+    </section>-->
+
+
+   <!-- <footer>
+        <p>Contact us: info@edgesystems.com | Follow us on</p>
+        <div class="social-icons">
+        <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
+        </div>
+    </footer> -->
+</body>
+</html>

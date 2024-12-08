@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9; /* Matches the app's background */
+    color: #333; /* Consistent text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+
+    gap: 15px;
+}
+
+.room-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.room-label {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px; /* Spacing between label and control */
+    text-align: center;
+}
+
+.wrapper{
+    display: flex;
+    height: 100px;
+    min-width: 300px;
+    align-items: center;
+    gap: 20px;
+    width: 100px;
+    max-width: 400px;
+    justify-content: center;
+    background: #007BFF;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    color: white;
+}
+.wrapper span{
+    width: 100%;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.wrapper span.num{
+    font-size: 45px;
+    pointer-events: none;
+}
